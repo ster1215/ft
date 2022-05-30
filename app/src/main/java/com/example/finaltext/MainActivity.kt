@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 flag = true
+                game.fly.update()
                 img.setImageResource(R.drawable.stop)
                 job = GlobalScope.launch(Dispatchers.Main) {
                     while(flag) {
